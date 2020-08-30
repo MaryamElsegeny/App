@@ -1,10 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/icon_instagram_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/instagram"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/logo_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/billabong"
+            android:text="Instagram"
+            android:textColor="#E4000000"
+            android:textSize="60sp"
+            app:layout_constraintLeft_toLeftOf="@id/icon_instagram_iv"
+            app:layout_constraintRight_toRightOf="@id/icon_instagram_iv"
+            app:layout_constraintTop_toBottomOf="@id/icon_instagram_iv" />
+
+        <EditText
+            android:id="@+id/user_name_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Phone number , email or username"
+            android:inputType="textCapSentences"
+            android:padding="7dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_tv" />
+
+        <EditText
+            android:id="@+id/password_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="7dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_name_et"
+
+            />
+
+        <!-- <TextView
+             android:id="@+id/forget_pass_tv"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="30dp"
+             android:layout_marginRight="30dp"
+             android:text="Forget password ?"
+             android:textColor="#2499CF"
+             android:textSize="15sp"
+             app:layout_constraintRight_toRightOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/password_et"
+
+
+             />-->
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rounded_button"
+            android:text="Log In"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password_et" />
+
+        <TextView
+            android:id="@+id/forget_login_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Forgot Your login details ? "
+            app:layout_constraintStart_toStartOf="@id/login_btn"
+            app:layout_constraintTop_toBottomOf="@id/login_btn"
+            app:layout_constraintEnd_toEndOf="@id/login_btn"
+            android:layout_marginRight="120dp"
+            />
+        <TextView
+            android:id="@+id/get_hilp_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Help signing in."
+            android:textColor="#0D61A1"
+            app:layout_constraintBottom_toBottomOf="@id/forget_login_tv"
+            app:layout_constraintTop_toTopOf="@id/forget_login_tv"
+            app:layout_constraintStart_toEndOf="@id/forget_login_tv"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/or_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="OR"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@id/login_btn"
+            app:layout_constraintStart_toStartOf="@id/login_btn"
+            app:layout_constraintTop_toBottomOf="@id/forget_login_tv" />
+
+
+
+
+
+        <ImageView
+            android:id="@+id/icon_facebook_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="150dp"
+            android:src="@drawable/facebook"
+            app:layout_constraintEnd_toEndOf="@id/or_tv"
+            app:layout_constraintStart_toStartOf="@id/or_tv"
+            app:layout_constraintTop_toBottomOf="@id/or_tv" />
+
+        <TextView
+            android:id="@+id/login_facebook_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="Continue as Maryam"
+            android:textColor="#2499CF"
+            app:layout_constraintBottom_toBottomOf="@id/icon_facebook_iv"
+            app:layout_constraintStart_toEndOf="@id/icon_facebook_iv"
+            app:layout_constraintTop_toTopOf="@id/icon_facebook_iv" />
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/dont_have_account_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account ?"
+
+            app:layout_constraintLeft_toLeftOf="@id/login_btn"
+            app:layout_constraintRight_toRightOf="@id/login_btn"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
